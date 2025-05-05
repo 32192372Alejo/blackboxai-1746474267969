@@ -64,7 +64,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="@string/featured_interview_title"
+                        android:text="Entrevistas de comportamiento:\nPráctica técnica"
                         android:textColor="@color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />
@@ -73,7 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="@string/featured_interview_description"
+                        android:text="Domina las preguntas comunes de entrevista sobre código, diseño y arquitectura"
                         android:textColor="@color/text_secondary"
                         android:textSize="16sp" />
 
@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:text="@string/start_button"
+                        android:text="Inicio"
                         android:textColor="@color/white"
                         app:backgroundTint="@color/blue_accent" />
                 </LinearLayout>
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:text="@string/practice_interviews_title"
+                android:text="Entrevistas de práctica"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
