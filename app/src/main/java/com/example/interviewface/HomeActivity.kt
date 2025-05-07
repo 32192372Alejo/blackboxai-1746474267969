@@ -17,8 +17,12 @@ class HomeActivity : AppCompatActivity() {
         setupBottomNavigation()
     }
 
-    private fun setupBottomNavigation() {
+    override fun onResume() {
+        super.onResume()
         binding.bottomNavigation.selectedItemId = R.id.navigation_home
+    }
+
+    private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             if (item.itemId == binding.bottomNavigation.selectedItemId) {
                 // Already selected, do nothing
@@ -30,22 +34,30 @@ class HomeActivity : AppCompatActivity() {
                         true
                     }
                     R.id.navigation_interviews -> {
-                        startActivity(Intent(this, InterviewsActivity::class.java))
+                        val intent = Intent(this, InterviewsActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                        startActivity(intent)
                         finish()
                         true
                     }
                     R.id.navigation_comments -> {
-                        startActivity(Intent(this, CommentsActivity::class.java))
+                        val intent = Intent(this, CommentsActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                        startActivity(intent)
                         finish()
                         true
                     }
                     R.id.navigation_profile -> {
-                        startActivity(Intent(this, ProfileActivity::class.java))
+                        val intent = Intent(this, ProfileActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                        startActivity(intent)
                         finish()
                         true
                     }
                     R.id.navigation_more -> {
-                        startActivity(Intent(this, MoreActivity::class.java))
+                        val intent = Intent(this, MoreActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                        startActivity(intent)
                         finish()
                         true
                     }
