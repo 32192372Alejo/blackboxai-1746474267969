@@ -20,25 +20,33 @@ class InterviewsActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.selectedItemId = R.id.navigation_interviews
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.navigation_home -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    true
+            if (item.itemId == binding.bottomNavigation.selectedItemId) {
+                true
+            } else {
+                when (item.itemId) {
+                    R.id.navigation_home -> {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                        finish()
+                        true
+                    }
+                    R.id.navigation_interviews -> true
+                    R.id.navigation_comments -> {
+                        startActivity(Intent(this, CommentsActivity::class.java))
+                        finish()
+                        true
+                    }
+                    R.id.navigation_profile -> {
+                        startActivity(Intent(this, ProfileActivity::class.java))
+                        finish()
+                        true
+                    }
+                    R.id.navigation_more -> {
+                        startActivity(Intent(this, MoreActivity::class.java))
+                        finish()
+                        true
+                    }
+                    else -> false
                 }
-                R.id.navigation_interviews -> true
-                R.id.navigation_comments -> {
-                    startActivity(Intent(this, CommentsActivity::class.java))
-                    true
-                }
-                R.id.navigation_profile -> {
-                    startActivity(Intent(this, ProfileActivity::class.java))
-                    true
-                }
-                R.id.navigation_more -> {
-                    startActivity(Intent(this, MoreActivity::class.java))
-                    true
-                }
-                else -> false
             }
         }
     }
