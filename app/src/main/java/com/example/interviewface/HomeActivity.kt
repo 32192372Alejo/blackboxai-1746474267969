@@ -30,10 +30,12 @@ class HomeActivity : AppCompatActivity() {
             } else {
                 when (item.itemId) {
                     R.id.navigation_home -> {
+                        android.widget.Toast.makeText(this, "Home clicked", android.widget.Toast.LENGTH_SHORT).show()
                         // Already on home, do nothing
                         true
                     }
                     R.id.navigation_interviews -> {
+                        android.widget.Toast.makeText(this, "Interviews clicked", android.widget.Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, InterviewsActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                         startActivity(intent)
@@ -41,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
                         true
                     }
                     R.id.navigation_comments -> {
+                        android.widget.Toast.makeText(this, "Comments clicked", android.widget.Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, CommentsActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                         startActivity(intent)
@@ -48,6 +51,7 @@ class HomeActivity : AppCompatActivity() {
                         true
                     }
                     R.id.navigation_profile -> {
+                        android.widget.Toast.makeText(this, "Profile clicked", android.widget.Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, ProfileActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                         startActivity(intent)
@@ -55,6 +59,7 @@ class HomeActivity : AppCompatActivity() {
                         true
                     }
                     R.id.navigation_more -> {
+                        android.widget.Toast.makeText(this, "More clicked", android.widget.Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, MoreActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
                         startActivity(intent)
