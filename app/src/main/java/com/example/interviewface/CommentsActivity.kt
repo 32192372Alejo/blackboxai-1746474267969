@@ -15,6 +15,14 @@ class CommentsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupBottomNavigation()
+
+        // Set the top bar title
+        binding.topBarTitle.text = "Comentarios"
+
+        // Set click listener for settings button
+        binding.settingsButton.setOnClickListener {
+            // TODO: Implement settings screen navigation
+        }
     }
 
     override fun onResume() {
